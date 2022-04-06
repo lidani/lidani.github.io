@@ -1,0 +1,21 @@
+// app global css in SCSS form
+
+.q-toolbar {
+  height: 80px;
+}
+
+/* size */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c2c2c2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7e7e7e;
+}
