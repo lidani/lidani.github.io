@@ -42,9 +42,9 @@
 import { defineComponent } from "vue";
 
 import CurveDelimiter from "src/components/CurveDelimiter.vue";
-import About from "src/pages/About.vue";
-import About2 from "src/pages/About2.vue";
-import About3 from "src/pages/About3.vue";
+import About from "pages/home/About.vue";
+import About2 from "pages/home/About2.vue";
+import About3 from "pages/home/About3.vue";
 
 const components = [About, About2, About3];
 
