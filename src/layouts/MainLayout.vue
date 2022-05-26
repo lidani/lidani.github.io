@@ -10,12 +10,21 @@
         <q-btn
           v-if="goBackRoute && goBackRoute.name"
           :to="goBackRoute"
-          color="black"
           round
           flat
-          icon="mdi-chevron-left"
+          color="black"
+          :icon="
+            goBackRoute && goBackRoute.name === 'home'
+              ? 'mdi-home'
+              : 'mdi-chevron-left'
+          "
         >
         </q-btn>
+
+        <div class="text-body1 text-black" v-if="title">
+          {{ title }}
+        </div>
+
         <q-space />
 
         <q-btn
@@ -36,17 +45,9 @@
 <script>
 import { defineComponent } from "vue";
 import pick from "lodash/pick";
+import apps from "src/constants/apps";
 
 const linksList = [
-  {
-    title: "Twitter",
-    ariaLabel: "Twitter",
-    icon: "mdi-twitter",
-    color: "twitter",
-    caption: "twitter.com/gustavo_lidani",
-    href: "https://twitter.com/gustavo_lidani",
-    target: "_blank",
-  },
   {
     title: "Linkedin",
     ariaLabel: "Linkedin",
@@ -63,6 +64,15 @@ const linksList = [
     caption: "github.com/lidani",
     icon: "mdi-github",
     href: "https://github.com/lidani",
+    target: "_blank",
+  },
+  {
+    title: "Twitter",
+    ariaLabel: "Twitter",
+    icon: "mdi-twitter",
+    color: "twitter",
+    caption: "twitter.com/gustavo_lidani",
+    href: "https://twitter.com/gustavo_lidani",
     target: "_blank",
   },
 ];
@@ -84,6 +94,14 @@ export default defineComponent({
       }
 
       return this.$route.name === route.name ? null : route;
+    },
+    title() {
+      if (this.$route.name === "apps") {
+        return "Aplicativos em Produção";
+      }
+
+      const app = apps[this.$route.params.app];
+      return app && app.id ? app.title : "";
     },
   },
 });
