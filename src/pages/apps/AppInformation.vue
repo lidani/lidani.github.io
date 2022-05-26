@@ -10,7 +10,6 @@ import { defineComponent } from "vue";
 export default defineComponent({
   props: {
     app: { default: () => ({}) },
-    id: {},
     action: { required: false },
   },
 });
