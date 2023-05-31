@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-center">
-    COMING SOON
+  <div class="flex column flex-center">
+    <AppList />
 
     <CurveDelimiter v-bind="$attrs" />
   </div>
@@ -9,9 +9,10 @@
 <script>
 import { defineComponent } from "vue";
 import CurveDelimiter from "src/components/CurveDelimiter.vue";
+import AppList from "src/components/apps/AppList.vue";
 
 export default defineComponent({
   name: "IndexPage",
-  components: { CurveDelimiter },
+  components: { CurveDelimiter, AppList },
 });
 </script>
