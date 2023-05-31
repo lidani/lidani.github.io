@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div
-      class="column col-xs-12 col-md-6 col-lg-4 q-pa-md"
+      class="column col-xs-12 col-md-6 q-pa-md"
       v-for="(app, i) in apps"
       :key="i"
     >
