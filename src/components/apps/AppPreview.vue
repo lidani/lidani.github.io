@@ -1,22 +1,19 @@
 <template>
-  <div
-    class="column text-center q-pa-xl rounded-borders"
-    style="background-color: #f5f5f7"
-  >
+  <div class="column text-center q-pa-lg" style="background-color: #f5f5f7">
     <q-img
       class="q-mx-auto cursor-pointer"
       style="border-radius: 40px"
       width="180px"
       :src="`/src/assets/apps/${app.id}.png`"
-      @click="$emit('image-click')"
+      @click="$emit('image-click', app)"
     />
-    <h3>
+    <h5>
       {{ app.title }}
-    </h3>
+    </h5>
 
-    <div class="q-mt-md row justify-center">
-      <apple-store :app="app" />
-      <play-store :app="app" />
+    <div class="q-mt-sm row justify-center">
+      <apple-store class="q-mr-xs" :app="app" />
+      <play-store class="q-ml-xs" :app="app" />
     </div>
   </div>
 </template>
