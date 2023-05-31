@@ -1,12 +1,13 @@
 {
   "name": "lidani.dev",
   "version": "0.0.1",
-  "description": "Gustavo's Github Page",
-  "productName": "Gustavo Lidani",
-  "author": "Gustavo Lidani <lidanig0@gmail.com>",
+  "description": "Lidani Tecnologia Github Page",
+  "productName": "Lidani Tecnologia",
+  "author": "Lidani Tecnologia <gustavo@lidani.dev>",
   "homepage": "https://lidani.github.io",
   "private": true,
   "scripts": {
+    "dev": "quasar dev",
     "lint": "eslint --ext .js,.vue ./",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0"
