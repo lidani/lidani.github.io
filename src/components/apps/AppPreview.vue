@@ -4,7 +4,7 @@
       class="q-mx-auto cursor-pointer"
       style="border-radius: 40px"
       width="180px"
-      :src="`/src/assets/apps/${app.id}.png`"
+      :src="image"
       @click="$emit('image-click', app)"
     />
     <h5>
@@ -27,6 +27,16 @@ export default defineComponent({
   components: { AppleStore, PlayStore },
   props: {
     app: { default: () => ({}) },
+  },
+  setup(props) {
+    const image = new URL(
+      `/src/assets/apps/${props.app.id}.png`,
+      import.meta.url
+    );
+
+    return {
+      image: image.href,
+    };
   },
 });
 </script>
