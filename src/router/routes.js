@@ -16,25 +16,19 @@ const routes = [
         component: () => import("pages/MainPage.vue"),
       },
       {
-        name: "apps",
-        path: "apps",
+        name: "apps-app-launch",
+        path: "apps/:app/launch",
+        props: appsPathProps,
+        component: () => import("pages/apps/LaunchApp.vue"),
+      },
+      {
+        name: "apps-app-information",
+        path: "apps/:app/:action?",
         props: (route) => ({
           ...appsPathProps(route),
           action: route.params.action,
         }),
-        component: () => import("layouts/AppsLayout.vue"),
-        children: [
-          {
-            name: "apps-app-information",
-            path: ":app/:action?",
-            component: () => import("pages/apps/AppInformation.vue"),
-          },
-        ],
-      },
-      {
-        path: "/launch/:app",
-        props: appsPathProps,
-        component: () => import("pages/apps/LaunchApp.vue"),
+        component: () => import("pages/apps/AppInformation.vue"),
       },
     ],
   },
