@@ -197,7 +197,7 @@
     <h5>How users may request deletion of your personal data</h5>
     <p>
       Just send an e-mail to
-      <a href="mailto:lidanig0@gmail.com">lidanig0@gmail.com</a> requesting the
+      <a href="mailto:gustavo@lidani.dev">gustavo@lidani.dev</a> requesting the
       deletion of all your personal data, the process is done manually due the
       very low requests of this kind.
     </p>

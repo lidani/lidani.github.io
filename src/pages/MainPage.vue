@@ -1,10 +1,10 @@
 <template>
   <main>
     <q-page-container class="bg-primary">
-      <!-- <q-page class="bg-primary"> -->
       <div class="bg-primary">
         <q-banner class="bg-primary text-dark q-pa-xl">
-          <div class="text-h2">Gustavo Lidani</div>
+          <div class="text-h2">Lidani Tecnologia</div>
+          <div class="text-h5">Gustavo Lidani</div>
           <div class="text-h6">
             Fullstack Web Developer | iOS and Android Developer
           </div>
@@ -12,7 +12,6 @@
 
         <CurveDelimiter fill="var(--q-secondary)" />
       </div>
-      <!-- </q-page> -->
 
       <component
         v-for="(page, i) in components"
@@ -31,7 +30,11 @@
     >
       <q-space></q-space>
       <div class="text-caption">
-        &copy;copyright {{ new Date().getFullYear() }}
+        e-mail: <a href="mailto:gustavo@lidani.dev">gustavo@lidani.dev</a>
+      </div>
+      <div class="text-caption">
+        &copy;copyright {{ new Date().getFullYear() }} Lidani Tecnologia LTDA
+        50.706.794/0001-81
       </div>
       <q-space></q-space>
     </q-banner>
@@ -43,10 +46,8 @@ import { defineComponent } from "vue";
 
 import CurveDelimiter from "src/components/CurveDelimiter.vue";
 import About from "pages/home/About.vue";
-import About2 from "pages/home/About2.vue";
-import About3 from "pages/home/About3.vue";
 
-const components = [About, About2, About3];
+const components = [About];
 
 export default defineComponent({
   components: { CurveDelimiter },
