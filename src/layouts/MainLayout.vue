@@ -96,10 +96,6 @@ export default defineComponent({
       return this.$route.name === route.name ? null : route;
     },
     title() {
-      if (this.$route.name === "apps") {
-        return "Aplicativos em Produção";
-      }
-
       const app = apps[this.$route.params.app];
       return app && app.id ? app.title : "";
     },
