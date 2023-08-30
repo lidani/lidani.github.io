@@ -36,11 +36,7 @@ export default defineComponent({
         window.location.replace(`${props.app.ios}://`);
 
         setTimeout(() => {
-          window.location.replace(
-            `itms-apps://itunes.apple.com/us/app/id${
-              props.app.applestore
-            }?platform=${$q.platform.is.ipad ? "ipad" : "iphone"}`
-          );
+          window.location.replace(props.app.applestore);
         }, 1000);
       }
     };

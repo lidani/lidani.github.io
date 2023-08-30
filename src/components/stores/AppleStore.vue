@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
 import { useQuasar } from "quasar";
 
 export default defineComponent({
@@ -20,14 +20,12 @@ export default defineComponent({
   setup(props) {
     const $q = useQuasar();
 
-    const href = `https://itunes.apple.com/us/app/id${
-      props.app.applestore
-    }?platform=${$q.platform.is.ipad ? "ipad" : "iphone"}`;
+    const href = computed(() => props.app.applestore);
 
     return {
       href,
       onClick() {
-        return window.open(href, "_blank");
+        return window.open(href.value, "_blank");
       },
     };
   },
