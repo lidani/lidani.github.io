@@ -6,6 +6,10 @@ const appsPathProps = (route) => ({
 
 const routes = [
   {
+    path: "/launch/:app",
+    redirect: (to) => `/apps/${to.params.app}/launch`,
+  },
+  {
     path: "/",
     name: "main",
     component: () => import("layouts/MainLayout.vue"),
